@@ -1,0 +1,1035 @@
+%----------------------------------------------------------------------------------------
+%    PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usetheme{SimplePlus}
+
+\usepackage[utf8]{inputenc}		% defines file's character encoding
+\usepackage[ngerman]{babel}     % babel system, adjust the language of the content
+
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{xcolor}
+
+% for the table
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{adjustbox}
+
+%frame
+\usepackage{mdframed}
+
+%\usepackage[backend=bibtex]{biblatex} % Use biblatex with BibTeX
+%\addbibresource{reference.bib}       % Your .bib file
+
+%----------------------------------------------------------------------------------------
+% TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{Ungleichheit und Verteilung}
+\subtitle{Ringvorlesung Zukunftsfähiges Wirtschaften in Zeiten multipler Krisen}
+
+\author{Clara Himmelbauer}
+
+\institute
+{
+    Research Institute Economics of Inequality (INEQ) \\
+    WU Vienna % Your institution for the title page
+}
+\date{December 3rd, 2025} % Date, can be changed to a custom date
+
+%----------------------------------------------------------------------------------------
+%    PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}
+    % Print the title page as the first slide
+    \titlepage
+\end{frame}
+
+% \begin{frame}{Project Overview}
+%     This work is part of a project together with Lukas Heck. We want to see how outsourcing of childcare interacts with social class. I present the quanti results but we are also conducting a qualitative analysis.
+% \end{frame}
+
+\begin{frame}{Plan für heute}
+
+    \tableofcontents
+\end{frame}
+
+%------------------------------------------------
+\section{Dimensionen von Ungleichheit}
+%------------------------------------------------
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+        Dimensionen von Ungleichheit
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[label = ungleichheit-was-wer]{Dimensionen von Ungleichheit}
+
+    \begin{columns}
+        \begin{column}{.45\textwidth}
+            \begin{block}{Ungleichheit von was?}
+                \pause
+                \begin{itemize}
+                    \item Einkommen, Vermögen
+                    \item Bildung, Zeit, Klassen, Konsum, ...
+                    \item Outcomes vs. Chancen
+                \end{itemize}
+            \end{block}
+        \end{column}
+        
+        \pause
+        \begin{column}{.45\textwidth}
+            \begin{block}{Ungleichheit von wem?}
+                \pause
+                \begin{itemize}
+                    \item Individuen
+                    \item Haushalte
+                    \item Staaten
+                \end{itemize}
+            \end{block}
+        \end{column}
+
+    \end{columns}
+
+    \vspace{0.5cm}
+    \hyperlink{messung}{\beamerskipbutton{Quantifizierung von Ungleichheit}}
+\end{frame}
+
+\begin{frame}{Globale Einkommens- und Vermögensverteilung}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/verteilung_allgemein/wir_global-income-wealth-inequality.png}
+        \label{fig:wir_global-income-wealth-ineq}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Globale Einkommensverteilung: Within \& Between-Country}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/verteilung_allgemein/wir_within-between-country-ineq.png}
+        \label{fig:wir_within-between-ineq}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Globales Einkommenswachstum}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\linewidth]{figures/verteilung_allgemein/elephant-graph.png}
+        \label{fig:elephant-graph}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[label = ekverteilung_at]{Nationale Einkommensverteilung}
+
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=1\linewidth]{figures/verteilung_allgemein/ak_einkommensverteilung-oesterreich.png}
+            \label{fig:ak_einkommensverteilung}
+        \end{figure}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \hyperlink{ekverteilung_alternativ}{\beamerskipbutton{Alternative Darstellung}}
+            \hyperlink{gender-pay-gap}{\beamerskipbutton{Gender-Pay Gap}}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+
+\begin{frame}[label = vermoegensverteilung_at]{Nationale Vermögensverteilung}
+
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=1\linewidth]{figures/verteilung_allgemein/hfcs-2010_bruttovermoegensverteilung.png}
+            \label{fig:hfcs_vermoegensverteilung}
+        \end{figure}
+        \end{column}
+
+        \begin{column}{0.25\textwidth}
+            \hyperlink{vermoegensverteilung-alternativ}{\beamerskipbutton{Alternative Darstellung}}
+            \hyperlink{vermoegensverteilung-kumulativ}{\beamerskipbutton{Kumulierte Vermögensverteilung}}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+\begin{frame}[label = zeitverwendung]{Verteilung von Arbeit}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/verteilung_allgemein/zve_arbeitszeit.png}
+        \label{fig:zve_verteilung-arbeit}
+    \end{figure}
+
+    \hyperlink{zeitverwendung_erwachsene}{\beamerskipbutton{Verteilung von Arbeitszeit 25-59-Jährige}}
+    \hyperlink{gender-pay-gap}{\beamerskipbutton{Gender-Pay-Gap}}
+\end{frame}
+
+%------------------------------------------------
+\section{Arm und Reich}
+%------------------------------------------------
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+        Arm und Reich
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Diskussion}
+    \begin{itemize}
+        \item Wann ist man arm?
+        \item Wann ist man reich?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label = armutsmessung]{Armut}
+    \begin{columns}
+        \begin{column}{.3\textwidth}
+            \begin{block}{Absolute Armutsbetroffenheit}
+                \begin{itemize}
+                    \item Extreme Armutsschwelle: weniger als \$3 pro Person und Tag (in Kaufkraftparitäten)
+                    \item Weltbank-Definition
+                \end{itemize}
+            \end{block}
+        \end{column}
+
+        \pause
+        \begin{column}{.3\textwidth}
+            \begin{block}{Relative Armutsgefährdung}
+                \begin{itemize}
+                    \item Haushaltseinkommen weniger als 60\% des (nationalen) äquivalisierten Median-Netto-Haushalts-Einkommens
+                    \item OECD-Definition, Messung mittels EU-SILC
+                \end{itemize}   
+            \end{block}            
+        \end{column}
+
+        \pause
+        \begin{column}{.3\textwidth}
+            \begin{block}{Erhebliche materielle und soziale Deprivation}
+                \begin{itemize}
+                    \item Nichterfüllung der Grundbedürfnisse in mindestens 7 von 13 Merkmalen
+                    \item Messung mittels EU-SILC
+                \end{itemize}    
+            \end{block}
+
+        \end{column}
+
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Menschen in absoluter Armut}
+        
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.675\linewidth]{figures/armut/wordbank_poverty-rate-by-country-2025.png}
+        \label{fig:weltbank_poverty-countries}
+    \end{figure}
+
+    Weltweit leben über 600 Millionen (7,9\%) Menschen in extremer Armut
+\end{frame}
+
+\begin{frame}{Armut in Österreich}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/armut/statA_armutsgefaehrdung-oesterreich.png}
+        \label{fig:armutsgefaehrdung-oesterreich}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Reichtum}
+    \begin{itemize}
+        \item Reichtumsgrenze bei 300\% des äquivalisierten Median-Netto-Haushalts-Einkommens?
+        \item Was ist mit Vermögen?
+    \end{itemize}
+
+    \pause
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+        \begin{itemize}
+            \item Wir haben keine guten Daten zu Reichtum
+            \item Annäherung mittels HFCS \& Reichenlisten (Forbes, Trend)
+        \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \begin{flushright}
+                    \includegraphics[width=1\linewidth]{figures/memes/wealth-tax-for-data.jpg}
+                \end{flushright}
+                \label{fig:wealth-tax-for-data}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+%------------------------------------------------
+\section{Auswirkungen von Ungleichheit}
+%------------------------------------------------
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+        Auswirkungen von Ungleichheit
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Probleme durch Ungleichheit}
+    \begin{itemize}
+        \item Wählt in Kleingruppen eine Dimension von Ungleichheit.
+        \item Wieso ist Ungleichheit hier ein Problem?
+        \item Welche politischen Maßnahmen könnte man setzen?
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \pause
+    \begin{itemize}
+        \item Demokratie \& Ungleichheit
+        \item Klimawandel \& Ungleichheit
+        \item Auswirkungen auf Chancengleichheit und soziale Mobilität
+        \item Intersektionale Perspektive auf Ungleichheit
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label = demokratie_einflussnahme]{Demokratie: Politische Einflussnahme}
+    Politsche Einflussnahme über:
+        \begin{itemize}
+            \item Lobbying \hyperlink{lobbying}{\beamerskipbutton{Lobbying}}
+            \item Parteien finanzieren oder gründen \hyperlink{parteispenden}{\beamerskipbutton{Parteispenden}}
+            \item Überrepräsentation in politischen Ämtern \hyperlink{ueberrepraesentation}{\beamerskipbutton{Überrepräsentation}}
+            \item Politische Einflussnahme über Medien \hyperlink{medien}{\beamerskipbutton{Medienlandschaft Österreich}}
+            \item Finanzierung von Think-Tanks
+            \item Korruption: Direkte Zahlungen an Politiker
+            \item Drehtür-Effekt, Postenschacher
+        \end{itemize}
+
+    \hyperlink{meme-korruption}{\beamerskipbutton{Cartoon Korruption \& Lobbying}}
+\end{frame}
+
+\begin{frame}[label = demokratie_teilhabe]{Demokratie: sonstige negative Effekte von Ungleichheit}
+    Vertrauen sinkt durch (Wirtschafts-)Politik für die Reichen
+    \begin{itemize}
+        \item Vertrauen in politische Institutionen
+        \item Vertrauen in Demokratie als Staatsform (an der alle teilhaben können)
+    \end{itemize}
+
+    \pause
+    \vspace{0.5cm}
+    Geringere politische Teilhabe
+    \begin{itemize}
+        \item Armut korrelliert negativ mit politischer Teilhabe
+        \item Armutsgefährdete bei Nichtwahlberechtigten überrepräsentiert \hyperlink{nichtwahlberechtigte}{\beamerskipbutton{Nichtwahlberechtigte}}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label = klimawandel]{Klimawandel: Probleme}
+    Reiche stoßen mehr CO2 aus
+    \begin{itemize}
+        \item Globaler Norden (= reiche Länder) emittieren mehr \hyperlink{percapita_gdp-co2}{\beamerskipbutton{BIP und CO2 Emissionen pro Kopf}}
+        \item Reiche Menschen emittieren mehr \hyperlink{co2-einkommensverteilung}{\beamerskipbutton{Einkommensverteilung und Emissionen}} {\scriptsize \href{https://de.linkedin.com/posts/marko-kovic_ein-mann-der-soeben-mit-einem-privatjet-activity-7084645559055069184-4y1S}{Strg+F Menschen auf Sylt}}
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \pause
+    Arme sind stärker vom Klimawandel betroffen
+    \begin{itemize}
+        \item Arme Länder stärker betroffen \hyperlink{climate-risk}{\beamerskipbutton{Climate Risk Index}}
+        \item Weniger Möglichkeiten, die Folgen des Klimawandels abzufedern (arme Personen + arme Länder)
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \hyperlink{memes-klimawandel}{\beamerskipbutton{Memes}}
+\end{frame}
+
+\begin{frame}{Klimawandel: Maßnahmen}
+    Maßnahmen um den Zusammenhang zwischen Klimawandel und Ungleichheit abzufedern
+    \begin{itemize}
+        \item Öffentliche Infrastruktur für nachhaltige Mobilität
+        \item Soziale Sicherung: Schutz vor Energiearmut, Sanierungspolitik
+        \item CO2-Steuer, Carbon Border Adjustment Mechanism
+        \item Klimafinanzierung für arme Länder, CO2-Budgets
+        \item Demokratische Teilhabe
+        \item Kontrolle, internationale Standards
+        \item Maßnahmen, die Ungleichheit im Allgemeinen verringern
+        \item ....
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label = social-mobility]{Social Mobility: Definition}
+    Definition: Veränderung der sozialen Position einer Person innerhalb der Gesellschaft innerhalb des Lebens oder zwischen den Generationen
+    \pause
+    \begin{itemize}
+        \item Intergenerationale Mobilität: Eltern vs. Kinder
+        \item Intragenerationale Mobilität: Innerhalb eines Lebens
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \pause
+    Dimensionen von sozialer Mobilität
+    \begin{itemize}
+        \item Einkommen \hyperlink{einkommensmobilitaet}{\beamerskipbutton{Einkommensmobilität in Österreich}}
+        \item Bildung \hyperlink{bildungsmobilitaet}{\beamerskipbutton{Bildungsmobilität in Österreich}}
+        \item Klassen
+    \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}[label = soziale-mobilitaet-2]{Soziale Mobilität und Ungleichheit}
+
+    \begin{center}
+        \textit{Je mehr Ungleichheit, desto weniger soziale Mobilität} \\
+        \hyperlink{great-gatsby-curve}{\beamerskipbutton{Great Gatsby Curve}}
+    \end{center}
+
+    \vspace{0.5cm}
+    \pause
+    Reiche Kinder haben einen Vorteil aufgrund von
+    \begin{itemize}
+        \item Kulturelles Kapital, Förderung von Kindern
+        \item Netzwerke
+        \item Geld für gute Schulen, Kindergärten, außerschulische Aktivitäten
+        \item Gesündere Lebensbedingungen, weniger beengte Wohnsituation
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Soziale Mobilität: Maßnahmen}
+    \begin{itemize}
+        \item Öffentliches, hochqualitatives, durchläassiges, gratis Bildungssystem; Gesamt- und Ganztagsschulen; Ressourcen für Brennpunktschulen
+        \item Bekämpfung von Kinderarmut: Kindergrundsicherung, gratis Schulbücher, gratis Schulessen
+        \item Weniger prekäre Beschäftigung: Befristung, Leiharbeit, Gig-Economy, ...
+        \item Flächendeckende Kinderbetreuung
+        \item Anerkennung von Abschlüssen, Antidiskriminierung
+        \item Weniger regionale Segregation
+        \item ...
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}[label = intersectionality]{Intersektionalität}
+    Diskriminierung ist nicht additiv - sie verstärkt sich gegenseitig
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.8\linewidth]{figures/intersektionalitaet/intersectionality.png}
+                \label{fig:intersectionality}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.3\textwidth}
+            \hyperlink{multipov}{\beamerskipbutton{Mulitple Armutsgefährdung}}
+            \hyperlink{einkommen_sex-mig}{\beamerskipbutton{EK nach Geschlecht \& Geburtsland}}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+\section{Allgemeine Politikmaßnahmen}
+%------------------------------------------------
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+        Allgemeine politische Maßnahmen gegen Ungleichheit
+    \end{center}
+\end{frame}
+
+\begin{frame}[label = politik]{Allgemeine Politische Maßnahmen gegen Ungleichheit}
+    \begin{itemize}
+        \item Steuersystem: Progressive Einkommenssteuer, Vermögenssteuern, vermögensbezogene Steuern, einmalige Abgaben auf Vermögen \hyperlink{vermoegenssteuern}{\beamerskipbutton{Vermögenssteuern}} \hyperlink{meme_steuern}{\beamerskipbutton{Steuermemes}}  
+        \pause
+        \item Soziale Sicherung, Sozialleistungen
+        \pause
+        \item Arbeitsmarktpolitik: Mindestlöhne, sichere Arbeitsbedingungen
+        \pause
+        \item Bildung und Chancengleichheit
+        \pause
+        \item Öffentliche Infrastruktur, Gesundheitsversorgung, Kinderbetreuung
+        \pause
+        \item Antidiskriminierung
+    \end{itemize}
+    
+    \hyperlink{armutskonferenz}{\beamerskipbutton{Forderungen der Armutskonferenz}}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Ceterum Censeo}
+%------------------------------------------------
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+        Ceterum Censeo
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[label = was-ist-gerecht]{Was ist gerecht?}
+    Was ist gerecht? \hyperlink{meinungen-zu-ungleichheit}{\beamerskipbutton{Denken über Ungleichheit}}
+    \begin{itemize}
+        \item Wann ist Ungleichheit gerecht?
+        \item Was ist das richtige Maß an Ungleichheit?
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \pause
+    Wie hängen Armut und Reichtum zusammen? \hyperlink{arm-und-reich}{\beamerskipbutton{arm und reich}}
+    \begin{itemize}
+        \item Gibt es Armut ohne Reichtum?
+        \item Gibt es Reichtum ohne Armut?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[label = ceterum-censeo]{Ceterum Censeo - Punkte, die mir noch wichtig sind}
+    \begin{itemize}
+        \item Ungleichheit kann politisch bekämpft werden. Ungleichheit war am geringsten in den 70ern, aufgrund starker Sozialstaaten.
+
+        \pause
+        \vspace{0.5cm}
+        \item Privilegienreflexion: Wo stehst du selbst?
+
+        \pause
+        \vspace{0.5cm}
+        \item \hyperlink{final-meme}{\beamerskipbutton{Ein letztes Meme}}
+        \item \hyperlink{final-meme-2}{\beamerskipbutton{Ok, noch welche}}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Ressourcen}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            \begin{itemize}
+                \item World Inequality Report
+                \item World Inequality Databank: \url{https://wid.world/}
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.45\textwidth}
+            \url{https://github.com/ClaraHimmelbauer/Inequality}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.6\linewidth]{figures/allgemein/qr-code_github-inequality.png}
+                \caption{Alle Unterlagen zum Workshop findet ihr auf Github!}
+                \label{fig:qr-code}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    
+\end{frame}
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+         ?`Fragen? !`Fragen!
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Feedback}
+    Feedback
+    \begin{itemize}
+        \item Was hat euch gefallen? Was hat euch nicht gefallen? Was war so naja und könnte ich besser machen?
+        \item Was nehmt ihr mit?
+        \item Worüber hättet ihr gerne mehr gehört?
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \pause
+    \begin{center}
+        Kontakt: clara.himmelbuaer@wu.ac.at \\
+        {\small(Please send me your memes)}
+    \end{center}
+\end{frame}
+
+
+% \begin{frame}[allowframebreaks]{References}
+%     \nocite{*} 
+%     \footnotesize
+%     \bibliography{ref.bib}
+%     \bibliographystyle{apalike}
+% \end{frame}
+
+%------------------------------------------------
+\section*{Appendix}
+%------------------------------------------------
+
+\begin{frame}[plain,c]
+    \begin{center}
+    \usebeamerfont{title}
+    \color{DarkBlue}
+        Appendix
+    \end{center}
+\end{frame}
+
+\begin{frame}[label = messung]{Messung von Ungleichheit}
+    \begin{columns}
+        \begin{column}{0.45\textwidth}
+            Datenquellen
+            \begin{itemize}
+                \item EU-SILC (Einkommen)
+                \item Integrierte Lohn- und Einkommensteuerstatisitk
+                \item HSCF (Vermögen)
+                \item Reichenlisten (Vermögen)
+            \end{itemize}
+        \end{column}
+
+        \pause
+        \begin{column}{0.45\textwidth}
+            Indikatoren
+            \begin{itemize}
+                \item Lorenz-Kurve und Gini-Index
+                \item Top-Shares
+                \item Percentile-Shares
+                \begin{itemize}
+                    \item 90/10 share
+                    \item 90/50 share
+                \end{itemize}
+                \item Theil-Index (für Dekompositionen)
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \vspace{0.5cm}
+    \hyperlink{ungleichheit-was-wer}{\beamerskipbutton{Ungleichheit von was und von wem?}}
+\end{frame}
+
+\begin{frame}[label = ekverteilung_alternativ]{Nationale Einkommensverteilung (2)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{figures/verteilung_allgemein/akooe_einkommensverteilung.jpg}
+        \label{fig:ekverteilung-alternativ}
+    \end{figure}
+
+    \hyperlink{ekverteilung_at}{\beamerskipbutton{Nationale Einkommensverteilung}}
+\end{frame}
+
+\begin{frame}[label = gender-pay-gap]{Gender-Pay-Gap}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{figures/verteilung_allgemein/stata_gender-pay-gap.png}
+        \label{fig:gender-pay-gap}
+    \end{figure}
+
+    \hyperlink{ekverteilung_at}{\beamerskipbutton{Nationale Einkommensverteilung}}
+    \hyperlink{zeitverwendung}{\beamerskipbutton{Verteilung von Arbeitszeit Zeitverwendungserhebung}}
+\end{frame}
+
+
+\begin{frame}[label = vermoegensverteilung-alternativ]{Nationale Vermögensverteilung (2)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.65\linewidth]{figures/verteilung_allgemein/akooe_vermoegensverteilung.png}
+        \label{fig:vermoegensverteilung-alternativ}
+    \end{figure}
+
+    \hyperlink{vermoegensverteilung_at}{\beamerskipbutton{Nationale Vermögensverteilung}}
+\end{frame}
+
+\begin{frame}[label = vermoegensverteilung-kumulativ]{Nationale Vermögensverteilung (3)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/verteilung_allgemein/ferschli_kumulative-vermoegensverteilung.png}
+        \label{fig:ferschli_vermoegensverteilung kumulativ}
+    \end{figure}
+
+    \hyperlink{vermoegensverteilung_at}{\beamerskipbutton{Nationale Vermögensverteilung}}
+\end{frame}
+
+\begin{frame}[label = zeitverwendung_erwachsene]{Verteilung von Arbeit}
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/verteilung_allgemein/zve_arbeitszeit_25-59.png}
+        \label{fig:zve_verteilung-arbeit_25-59}
+    \end{figure}
+
+    \hyperlink{zeitverwendung}{\beamerskipbutton{Verteilung von Arbeitszeit Zeitverwendungserhebung}}
+\end{frame}
+
+
+\begin{frame}[label = lobbying]{Lobbying}
+    \begin{columns}
+
+        \begin{column}{0.7\textwidth}
+            \begin{itemize}
+                \item Lobbying dient auch der Weitergabe von Informationen zwischen Politik und Verbänden, Unternehmen, Interessensgruppen
+                \item Maßnahmen für besseres Lobbying: Mehr Transparenz und Kontrolle
+                \begin{itemize}
+                    \item Einsicht ins Lobbyisten-Register
+                    \item Offenlegungspflichten für Lobbyist*innen und Politiker*innen
+                    \item Cooling-off Phase für Politiker*innen
+                    \item Keine Schlupflöcher, Gleichstellung aller Organisationen
+                    \item Sanktionen bei schädlichem Lobbying
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.3\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/demokratie/lobbycontrol_huawei.png}
+                \label{fig:lobbycontrol_huawei}
+            \end{figure}
+            \vspace{-1cm}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/demokratie/spiegel_veggie.png}
+                \label{fig:spiegel_veggie}
+            \end{figure}
+        \end{column}
+
+        
+    \end{columns}
+
+    \hyperlink{demokratie_einflussnahme}{\beamerskipbutton{Ungleichheit und Demokratie: Einflussnahme}}
+\end{frame}
+
+\begin{frame}[label = parteispenden]{Politische Einflussnahme über Parteispenden}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/demokratie/oevp-spenden-2017.png}
+                \label{fig:derstandard-oevpspenden}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/demokratie/parteispenden-2012-17.png}
+                \label{fig:apa_parteispenden}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    
+    \hyperlink{demokratie_einflussnahme}{\beamerskipbutton{Ungleichheit und Demokratie: Einflussnahme}}
+\end{frame}
+
+\begin{frame}[label = ueberrepraesentation]{Überrepräsentation von Millionär*innen in Politik}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/demokratie/millionaires_congress-usa_own-piechart.png}
+                \label{fig:piechart_millionaires}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/demokratie/vermoegen_politiker-deutschland.png}
+                \label{fig:vermoegen-deutsche-politiker}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    
+    \hyperlink{demokratie_einflussnahme}{\beamerskipbutton{Ungleichheit und Demokratie: Einflussnahme}}
+\end{frame}
+
+\begin{frame}[label = medien]{Medienlandschaft in Österreich}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.55\linewidth]{figures/demokratie/medieneigentum-oesterreich.jpg}
+        \label{fig:medienlandschaft-oesterreich}
+    \end{figure}
+    
+     \hyperlink{demokratie_einflussnahme}{\beamerskipbutton{Ungleichheit und Demokratie: Einflussnahme}}
+\end{frame}
+
+\begin{frame}[label = meme-korruption]{Lobbying und Korruption}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\linewidth]{figures/memes/lobbying.jpg}
+        \label{fig:meme-korruption}
+    \end{figure}
+    \hyperlink{demokratie_einflussnahme}{\beamerskipbutton{Ungleichheit und Demokratie: Einflussnahme}}
+\end{frame}
+
+\begin{frame}[label = nichtwahlberechtigte]{Armut und Nichtwahlberechtigung (1)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{figures/demokratie/silc22_povmd60-stb_1.png}
+        \caption{Datenbasis: EU-SILC 2022; eigene Darstellung.}
+´       \label{fig:silc22_povmd60-stb_1}
+    \end{figure}
+    \vspace{-1cm}    
+    \hyperlink{demokratie_teilhabe}{\beamerskipbutton{Ungleichheit und Demokratie: Teilhabe}}
+\end{frame}
+
+\begin{frame}{Armut und Nichtwahlberechtigung (2)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{figures/demokratie/silc22_povmd60-stb_2.png}
+        \caption{Datenbasis: EU-SILC 2022; eigene Darstellung.}
+´       \label{fig:silc22_povmd60-stb_2}
+    \end{figure}
+    \vspace{-1cm}
+    \hyperlink{demokratie_teilhabe}{\beamerskipbutton{Ungleichheit und Demokratie: Teilhabe}}
+\end{frame}
+
+
+\begin{frame}[label = percapita_gdp-co2]{CO2 Ausstoß und BIP pro Kopf (Länderebene)}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\linewidth]{figures/klimawandel/worldbank_emissions-gdp-per-capita.png}
+        \label{fig:worldbank_emissions-gdp-per-capita}
+    \end{figure}
+
+    \hyperlink{klimawandel}{\beamerskipbutton{Klimawandel}}
+\end{frame}
+
+\begin{frame}[label = co2-einkommensverteilung]{Reiche Menschen emittieren mehr}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/klimawandel/wir_co2-emissions_inome.png}
+        \label{fig:wir_co2-emissions_income}
+    \end{figure}
+
+    \hyperlink{klimawandel}{\beamerskipbutton{Klimawandel}}
+\end{frame}
+
+
+\begin{frame}[label = climate-risk]{Climate Risk Index}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/klimawandel/germanwatch_climate-risk-indicator.png}
+        \label{fig:germanwatch_climate-risk}
+    \end{figure}
+
+    \hyperlink{klimawandel}{\beamerskipbutton{Klimawandel}}    
+\end{frame}
+
+\begin{frame}[label = memes-klimawandel]{Klimawandel-Memes}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/memes/cartoon-extinction.png}
+                \label{fig:cartoon-extinction}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.6\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/memes/orf_IV.png}
+                \label{fig:orf_IV}
+            \end{figure}
+            \hyperlink{klimawandel}{\beamerskipbutton{Klimawandel}}       
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+
+\begin{frame}[label = einkommensmobilitaet]{Einkommensmobilität in Österreich}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{figures/soziale-mobilitaet/oecd_generationen-bis-zum-durchschnittsek.png}
+        \label{fig:oecd_generationen-bis-zum-durchschnittsek}
+    \end{figure}
+    
+    \hyperlink{social-mobility}{\beamerskipbutton{Social Mobility}}       
+\end{frame}
+
+\begin{frame}[label = bildungsmobilitaet]{Bildungsmobilität in Österreich}
+    Bildungsmobilität in Österreich, Abgestimmte Erwerbstatistik 2024, 25-44-Jährige
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.7\linewidth]{figures/soziale-mobilitaet/bildungsabschluss_muetter-kinder.png}
+                \label{fig:bildungsabschluss_muetter-kinder}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.7\linewidth]{figures/soziale-mobilitaet/bildungsabschluss_vaeter-kinder.png}
+                \label{fig:bildungsabschluss_vaeter-kinder}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \hyperlink{social-mobility}{\beamerskipbutton{Social Mobility}}       
+\end{frame}
+
+\begin{frame}[label = great-gatsby-curve]{The Great-Gatsby-Curve}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{figures/soziale-mobilitaet/wikipedia_great-gatsby-curve.png}
+        \label{wikipedia_great-gatsby-curve}
+    \end{figure}
+    
+    \hyperlink{soziale-mobilitaet-2}{\beamerskipbutton{Social Mobility}}
+\end{frame}
+
+
+\begin{frame}[label = multipov]{Multiple Armutsgefährdung}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/intersektionalitaet/multipov-lue_mig.png}
+        \label{multipov-lue_mig}
+    \end{figure}
+    \vspace{-0.5cm}
+    {\footnotesize Datenbasis: LUE 2021, ZVE 2021/22; eigene Darstellung.} \\
+    \hyperlink{intersectionality}{\beamerskipbutton{Intersektionalität}}
+\end{frame}
+
+\begin{frame}[label = einkommen_sex-mig]{Einkommensverteilung Österreich}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/intersektionalitaet/silc22_genderpaygap-migration.png}
+        \label{silc22_genderpaygap-migration}
+    \end{figure}
+    \hyperlink{intersectionality}{\beamerskipbutton{Intersektionalität}}
+\end{frame}
+
+\begin{frame}[label = armutskonferenz]{Politische Forderungen der Armutskonferenz}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/politik/armutskonferenz_forderungen.jpg}
+        \label{armutskonferenz}
+    \end{figure}
+    \hyperlink{politik}{\beamerskipbutton{Allgemeine politische Forderungen}}
+\end{frame}
+
+
+\begin{frame}[label = vermoegenssteuern]{Vermögenssteuern}
+    Echte Vermögenssteuern: Vermögen wird direkt besteuert
+    \begin{itemize}
+        \item Grundsteuer
+        \item Zweitwohnsitzabgabe, Bodenwertabgabe
+        \item Allgemeine Vermögenssteuer
+    \end{itemize}
+
+    \pause
+    \vspace{0.5cm}
+    Vermögensbezogene Steuern: Vermögensübertragungen werden besteuert
+    \begin{itemize}
+        \item Grunderwerbssteuer, Kapitalverkehrssteuer, Stifungseingangssteuer
+        \item (Kapitalertragssteuer)
+        \item Erschafts- und Schenkungssteuer
+        \item Finanztransaktionssteuer
+    \end{itemize}
+
+    \hyperlink{politik}{\beamerskipbutton{Allgemeine politische Forderungen}}
+\end{frame}
+
+\begin{frame}[label = meme_steuern]{Memes Vermögenssteuern}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.65\linewidth]{figures/memes/bonin-vermoegenssteuer.jpg}
+                \label{fig:bonin}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.65\linewidth]{figures/memes/laffer-curve.jpg}
+                \label{fig:laffer-curve}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    
+    \hyperlink{politik}{\beamerskipbutton{Allgemeine politische Forderungen}}
+\end{frame}
+
+
+\begin{frame}[label = meinungen-zu-ungleichheit]{Wie denken Ökonomen über Ungleichheit?}
+    \begin{itemize}
+        \item Adam Smith: Inequality ist das Ergebnis von Naturgesetzen, die Löhne (Arbeiter*innen), Profite (Kapitalist*innen), und Rent (Landbesitzer*innen) bestimmen 
+        \item Malthus und Ricardo: Löhne sind am Subsistenzlevel, Landknappheit führt zu höheren Erträgen für Landbesitzer*innen $\rightarrow$ Besteuerung von Rent
+        \item Karl Marx: Kapital akkumuliert sich
+        \item Simon Kuznets: Invertierte-U-Kurve zwischen Ungleichheit und Wirtschaftsleistung
+        \item Neoklassik: Marktoutcome ist gerecht. Wirtschaftswachstum löst Verteilungsprobleme
+        \item Piketty: $r>g$
+        \item Acemoglu: Kreislauf zwsichen Institutionen/Technologie und Ungleichheit
+    \end{itemize}
+    \hyperlink{was-ist-gerecht}{\beamerskipbutton{Was ist gerecht?}}
+\end{frame}
+
+% \begin{frame}[label = meme_marktoutcome]{Marktoutcome ist gerecht}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.4\linewidth]{figures/memes/capitalsim-communism.png}
+%         \label{fig:rich-and-poor}
+%     \end{figure}
+
+%     \hyperlink{meinungen-zu-ungleichheit}{\beamerskipbutton{Wie denken Ökonomen über Ungleichheit?}}    
+% \end{frame}
+
+
+
+\begin{frame}[label = arm-und-reich]{Arm und Reich}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\linewidth]{figures/memes/capitalsim-communism.png}
+        \label{fig:rich-and-poor}
+    \end{figure}
+
+    \hyperlink{was-ist-gerecht}{\beamerskipbutton{Was ist gerecht?}}    
+\end{frame}
+
+\begin{frame}[label = final-meme]{Final Meme}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.4\linewidth]{figures/memes/fair-wealth-distribution-capitalism.jpg}
+        \label{fig:wealth-distribution-meme}
+    \end{figure}
+    
+     \hyperlink{ceterum-censeo}{\beamerskipbutton{Ceterum censeo}}
+\end{frame}
+
+\begin{frame}[label = final-meme-2]{Final Meme (2)}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/memes/trickle-down.jpg}
+                \label{fig:bonin}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=1\linewidth]{figures/memes/normaitvity-inequality.jpg}
+                \label{fig:normativity-inequality}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+     \hyperlink{ceterum-censeo}{\beamerskipbutton{Ceterum censeo}}
+\end{frame}
+
+\end{document}
